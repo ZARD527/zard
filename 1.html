@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Examples</title>
+    <style>
+        body {
+            font-family: "楷体", "KaiTi", serif;
+            font-size: 26px;
+            color: #f4ce69;
+            padding: 20px;
+            background-color: #1a3b32;
+        }
+        .code-block {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .code-block code {
+            display: block;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h2>辗转相除法(欧几里得算法)</h2>
+
+    <div class="code-block">
+        <p>循环实现:</p>
+        <code>
+            #include &lt;iostream&gt;//循环<br>
+            <br>
+            using namespace std;<br>
+            <br>
+            // 辗转相除法求最大公约数<br>
+            int gcd(int a, int b) {<br>
+                &nbsp;&nbsp;while (b != 0) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;int temp = b;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;b = a % b;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;a = temp;<br>
+                &nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;return a;<br>
+            }<br>
+            <br>
+            int main() {<br>
+                &nbsp;&nbsp;int num1, num2;<br>
+                &nbsp;&nbsp;cin &gt;&gt; num1 &gt;&gt; num2;<br>
+                <br>
+                &nbsp;&nbsp;int result = gcd(num1, num2);<br>
+                <br>
+                &nbsp;&nbsp;cout &lt;&lt; result &lt;&lt; endl;<br>
+                <br>
+                &nbsp;&nbsp;return 0;<br>
+            }<br>
+        </code>
+    </div>
+
+    <div class="code-block">
+        <p>递归实现:</p>
+        <code>
+            #include &lt;iostream&gt;//递归<br>
+            <br>
+            using namespace std;<br>
+            <br>
+            int gcd(int a, int b) {<br>
+                &nbsp;&nbsp;if (b == 0) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return a;<br>
+                &nbsp;&nbsp;} else {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return gcd(b, a % b);<br>
+                &nbsp;&nbsp;}<br>
+            }<br>
+            <br>
+            int main() {<br>
+                &nbsp;&nbsp;int a, b;<br>
+                &nbsp;&nbsp;cin &gt;&gt; a &gt;&gt; b;<br>
+                <br>
+                &nbsp;&nbsp;int result = gcd(a, b);<br>
+                &nbsp;&nbsp;cout &lt;&lt; result &lt;&lt; endl;<br>
+                <br>
+                &nbsp;&nbsp;return 0;<br>
+            }<br>
+        </code>
+    </div>
+
+    <div class="code-block">
+        <p>三目运算符实现:</p>
+        <code>
+            int gcd (int a,int b){<br>
+                &nbsp;&nbsp;return b==0 ? a : gcd(b , a%b);<br>
+            }<br>
+        </code>
+    </div>
+
+</body>
+</html>

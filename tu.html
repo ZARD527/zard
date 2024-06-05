@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a3b32;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .image-container img {
+            width: calc(50vw - 20px); /* Adjusting for margin */
+            height: auto; /* Adjusting for margin */
+            max-width: 500px;
+            max-height: 500px;
+            object-fit: cover;
+            border: 2px solid #0f59a4;
+        }
+        .centered-text {
+            font-size: 50px;
+            font-family: 'KaiTi', serif;
+            color: #f1939c;
+            text-align: center;
+            width: 100%;
+        }
+        .centered-text1 {
+            font-size: 26px;
+            font-family: 'KaiTi', serif;
+            color: #bbb5ac;
+            text-align: center;
+            width: 100%;
+        }
+        .last-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .last-row img {
+            margin: 0 auto;
+            width: calc(50vw - 20px); /* Adjusting for margin */
+            height: auto; /* Adjusting for margin */
+            max-width: 500px;
+            max-height: 500px;
+            object-fit: cover;
+            border: 2px solid #0f59a4;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-text">行远自迩，登高自卑</div>
+    <div class="image-container">
+        <img src="https://i2.mjj.rip/2024/06/04/df7746f8052de278405700d702bc8d99.jpeg" alt="Image 1">
+        <img src="https://i2.mjj.rip/2024/06/04/69ea7013ceedbeaa7fdd022f70f81bce.jpeg" alt="Image 2">
+        <img src="https://i2.mjj.rip/2024/06/04/d4cea525d4668c047e880c2fc389a94c.jpeg"  alt="Image 3">
+        <img src="https://i2.mjj.rip/2024/06/04/da08acde231094d3d9cfe4dff4849115.jpeg"  alt="Image 4">
+        <img src="https://i2.mjj.rip/2024/06/04/285872d48e56e6d333a083157c349183.jpeg"  alt="Image 5">
+        <img src="https://i2.mjj.rip/2024/06/04/e6cfd1929892cd6a54c8acb1110811ae.jpeg"  alt="Image 6">
+    </div>
+    <div class="last-row">
+        <img src="https://i2.mjj.rip/2024/06/04/74df1f6c82e9f35cb7f5020d7afb6d8a.jpeg"  alt="Image 7">
+    </div>
+    <div class="centered-text1">关山难越,谁悲失路之人;萍水相逢,尽是他乡之客。</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a3b32;
+        }
+        .container {
+            width: 80%;
+            height: 80%;
+            position: relative;
+        }
+        .image-container {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .image-container img {
+            border: 2px solid #0f59a4;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .links {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #1677b3;
+        }
+        .links a {
+            display: block;
+            margin: 5px 0;
+            font-size: 53px;
+            font-family: 楷体, sans-serif;
+            color: #1677b3;
+            text-decoration: none;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 37px;
+            font-family: 楷体, sans-serif;
+            color: #1677b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://pic.imgdb.cn/item/665e7a3a5e6d1bfa05c71dee.png" alt="Circle Image">
+        </div>
+        <div class="links">
+            <a href="https://zard527.github.io/zard/1.html">算法学习</a>
+            <a href="https://zard527.github.io/zard/tu.html">算法学习成果</a>
+            <a href="https://zard527.github.io/zard/2.html">Linux学习</a>
+            <a href="https://zard527.github.io/zard/3.html">学习力学习</a>
+            <a href="https://zard527.github.io/zard/4.html">总结</a>
+        </div>
+        <div class="footer">
+            谁怕，一蓑烟雨任平生。
+        </div>
+    </div>
+</body>
+</html>
+
+<!--zard527.github.io-->
